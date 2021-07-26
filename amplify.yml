@@ -9,6 +9,7 @@ frontend:
     preBuild:
       commands:
         - npm install
+        - nvm install node@^12.22.1
         - nvm use node@^12.22.1
         - npm install -g @quasar/cli
         - npm install emailjs-com --save
