@@ -11,6 +11,8 @@ frontend:
         - npm install npm@latest -g
         - npm install node@^12.22.1 --save
         - nvm current node -v
+        - nvm use $VERSION_NODE_12
+        - npm ci
         - npm install
         - nvm current node -v
         - npm install -g @quasar/cli
@@ -19,6 +21,8 @@ frontend:
         - npm ci
     build:
       commands:
+        - nvm use $VERSION_NODE_12
+        - node -v
         - quasar build
   artifacts:
     baseDirectory: dist/spa
