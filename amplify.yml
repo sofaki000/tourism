@@ -8,7 +8,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - nvm install node
+        - nvm install
         - nvm ls-remote
         - npm install npm@latest -g
         - nvm use $VERSION_NODE_13
