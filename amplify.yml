@@ -8,6 +8,9 @@ frontend:
   phases:
     preBuild:
       commands:
+        - nvm install node
+        - nvm install iojs
+        - nvm ls-remote
         - npm install npm@latest -g
         - npm install node@^12.22.1 --save
         - nvm current node -v
