@@ -1,0 +1,25 @@
+version: 2
+backend:
+  phases:
+    build:
+      commands:
+        - amplifyPush --simple
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+        - npm install -g @quasar/cli
+        - npm install emailjs-com --save
+        - npm install vue-router@next --save
+        - npm ci
+    build:
+      commands:
+        - quasar build
+  artifacts:
+    baseDirectory: dist/spa
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules
