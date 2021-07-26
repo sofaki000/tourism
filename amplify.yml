@@ -21,7 +21,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - nvm use $VERSION_NODE_12
+        - nvm use node@^12.22.1
         - node -v
         - quasar build
   artifacts:
