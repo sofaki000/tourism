@@ -10,13 +10,6 @@ frontend:
       commands:
         - nvm list
         - nvm install 12.22.1 && nvm use 12.22.1
-        - nvm ls-remote
-        - npm install npm@latest -g
-        - nvm use $VERSION_NODE_13
-        - nvm current node -v
-        - nvm install node@^12.22.1
-        - nvm use node@^12.22.1
-        - npm ci
         - npm install
         - nvm current node -v
         - npm install -g @quasar/cli
@@ -25,9 +18,6 @@ frontend:
         - npm ci
     build:
       commands:
-        - nvm install node@13.0.0
-        - nvm use $VERSION_NODE_13
-        - node -v
         - quasar build
   artifacts:
     baseDirectory: dist/spa
