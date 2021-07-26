@@ -9,11 +9,10 @@ frontend:
     preBuild:
       commands:
         - npm install
-        - nvm use $VERSION_NODE_12
+        - nvm use node@^12.22.1
         - npm install -g @quasar/cli
         - npm install emailjs-com --save
         - npm install vue-router@next --save
-        - nvm use $VERSION_NODE_12
         - npm ci
     build:
       commands:
