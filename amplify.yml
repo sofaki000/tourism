@@ -11,6 +11,7 @@ frontend:
         - npm install npm@latest -g
         - npm install node@^12.22.1 --save
         - nvm current node -v
+        - nvm install node@^12.22.1
         - nvm use node@^12.22.1
         - npm ci
         - npm install
@@ -21,6 +22,7 @@ frontend:
         - npm ci
     build:
       commands:
+        - nvm install node@^12.22.1
         - nvm use node@^12.22.1
         - node -v
         - quasar build
