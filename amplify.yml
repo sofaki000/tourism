@@ -8,6 +8,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - npm install npm@latest -g.
         - npm install node@^12.22.1 --save
         - nvm current node -v
         - npm install
