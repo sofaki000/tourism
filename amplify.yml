@@ -11,7 +11,7 @@ frontend:
         - npm install npm@latest -g
         - npm install node@^12.22.1 --save
         - nvm current node -v
-        - nvm use $VERSION_NODE_12
+        - nvm use node@^12.22.1
         - npm ci
         - npm install
         - nvm current node -v
