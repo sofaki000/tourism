@@ -15,8 +15,10 @@ export default{
         props:['blogInfos'],
         methods:{
                 goToPage(url){
-                        console.log(url)
-                        this.$router.push({ path: url})
+                        console.log("Blog slides", url)
+                        const pathStr="/Blog/";
+                        const finalUrl= pathStr.concat(url)
+                        this.$router.push({ path: finalUrl})
                 } 
          }
 }

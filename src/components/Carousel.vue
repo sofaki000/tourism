@@ -1,8 +1,8 @@
 <template>
 
-  <q-page style="width:2400px;height:600px;margin:auto">
+  <q-page class="carouselContainerXs carouselContainerMd carouselContainerXl">
 
-     <div style="width:2500px;height:100%;position:relative;bottom:17%" > 
+     <div class="carouselContainerXs carouselContainerMd carouselContainerXl" style="height:100%;position:relative;bottom:17%" > 
        
           <q-carousel
           width="100%"
@@ -84,7 +84,7 @@ export default {
 
 </script>
 <style scoped>
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .h2 {
     font-size: 35px;
     margin: auto;
@@ -98,6 +98,12 @@ export default {
      font-size: 35px;
   }
 
+  .carouselContainerXs{
+    width:700px;
+      height:600px;
+      margin:auto;
+  }
+
   .mobileDescription{
     font-size:20px
   }
@@ -105,15 +111,68 @@ export default {
   .centeringTextOnMobile{
     position:relative;
     margin:auto;
-    right:40px;
+    right:60px;
     bottom:30px;
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 700px) {
+  .h2 {
+    font-size: 35px;
+    margin: auto;
+  }
+.biggerImage{
+  width:1000px;
+  margin:auto;
+  text-align:center
+}
+  .mobileBigText{
+     font-size: 35px;
+  }
+
+  .carouselContainerXs{
+    width:1000px;
+      height:600px;
+      margin:auto;
+  }
+
+  .mobileDescription{
+    font-size:20px
+  }
+
+  .centeringTextOnMobile{
+    position:relative;
+    margin:auto;
+    bottom:30px;
+  }
+}
+
+
+
+@media only screen and (min-width:1000px) {
+
+.biggerImage{
+  width:100%;
+}
+
+.carouselContainerMd{
+ width:1300px;
+  height:600px;
+  margin:auto;
+}
+}
+
+@media only screen and (min-width: 1500px) {
 .biggerImage{
   width:1500px;
   margin:auto;
 }
+.carouselContainerXl{
+  width:2400px;
+  height:600px;
+  margin:auto;
 }
+}
+
+
 </style>

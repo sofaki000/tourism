@@ -131,9 +131,7 @@ export default{
 
           for(postCount =0 ;postCount<2 ;postCount++ ){
              if(typeof this.cardInfos[selectedPostIndex+postCount+1] === 'undefined'){
-               console.log("POST COUNT IZZZZZZZZZ", postCount)
                   this.featuredPosts.push(this.cardInfos[selectedPostIndex+postCount+1])
-                  console.log("PUSHED THING",this.cardInfos[selectedPostIndex+1] )
             }else{
                this.featuredPosts.push(this.cardInfos[selectedPostIndex+postCount-1])
             }

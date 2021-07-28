@@ -4,12 +4,12 @@
     <q-header reveal elevated class="bg-primary text-white" height-hint="98">
       <q-toolbar>
         <q-toolbar-title>
-          <q-avatar>
+          <q-avatar @click="goToHomePage" @mouseover="mouseOver"  id="linkIndicator">
             <img fit="none"
             ratio="16/9"
              src="../assets/logo.jpg">
           </q-avatar>
-          Corfu Meander Travel
+         <span @mouseover="mouseOver" id="linkIndicator" @click="goToHomePage"> Corfu Meander Travel</span>
         </q-toolbar-title>
 
         <q-btn class="mobile-show" dense flat round icon="menu" @click="toggleRightDrawer" />
@@ -66,7 +66,7 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="bg-white text-white" style="width:100%">
+    <q-footer elevated  class="bg-white text-white" style="width:100%">
       <q-toolbar>
     <q-btn  @click="facebook" size="sm" padding="xs" round class="btn" color="primary" icon="mdi-facebook " />
     <q-btn @click="linkedin" size="sm"  padding="xs" round class="btn" color="primary" icon="mdi-linkedin " />
@@ -96,6 +96,14 @@ export default {
     }
   },
   methods:{
+    mouseOver(){
+      document.getElementById("linkIndicator").style.cursor="pointer"
+    },
+    goToHomePage(){
+      this.$router.push({
+        path:'/'
+      })
+    },
        scrollToTop() {
                                   window.scrollTo({
                                         top: 0,

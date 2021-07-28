@@ -14,7 +14,6 @@
 <BlogCard class="box col-4 revealSlowly" :blogInfo="cardInfo" />
 </div>
 </div>
-<q-btn @click="scrollToTop" class="q-mt-xl" style="margin-left:50px">Back to the top</q-btn>
  
 </div>
 </template>
@@ -24,16 +23,7 @@ import BlogCard from '../components/BlogPage/BlogCard.vue'
 export default {
         components:{
                 BlogCard 
-        }, 
-          methods:{
-                scrollToTop() {
-                                  window.scrollTo({
-                                        top: 0,
-                                        left: 0,
-                                        behavior: 'smooth'
-                                        });
-                        }
-         },
+        },
         data(){
                 return{
                       cardInfos:[ {

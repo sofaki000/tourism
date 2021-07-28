@@ -8,7 +8,7 @@
 </div>
     <q-form  @submit="onSubmit" @reset="onReset" class="q-gutter-md" style="margin-top:60px">
       <q-input
-        filled
+        outlined
         v-model="firstName"
         label="First name *"
         hint="Type your first name"
@@ -17,7 +17,7 @@
       />
 
       <q-input
-        filled 
+        outlined
         v-model="lastName"
         label="Last Name"
         lazy-rules
@@ -25,8 +25,10 @@
           val => val !== null && val !== '' || 'Please type your last name' 
         ]"
       />
-  <q-input
-        filled 
+
+
+      <q-input
+        outlined
         v-model="email"
         label="Email"
         lazy-rules
@@ -35,27 +37,21 @@
         ]"
       />
 
-        <!-- <q-input
+        <q-input
+        class="contactForm"
                 v-model="contactContent"
                 label="Contact Form"
                 outlined 
+                 type="textarea"
                 lazy-rules
                 :rules="[
                 val => val !== null && val !== '' || 'Please type something' 
                 ]"
-      /> -->
-      <textarea 
-            name="message"
-            v-model="contactContent"
-            cols="44" rows="5"
-            style="padding:20px;"
-            placeholder="Write your message here">
-          </textarea>
-          
+      /> 
 
       <div>
         <q-btn label="Submit" type="submit" color="primary"/>
-        <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
+        <!-- <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" /> -->
       </div>
     </q-form>
 

@@ -27,3 +27,5 @@ frontend:
   cache:
     paths:
       - node_modules
+# - npm install vue-google-maps --save
+# - npm install --save q

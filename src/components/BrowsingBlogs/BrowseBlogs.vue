@@ -135,8 +135,8 @@ export default {
                         return window.scrollY > 300;
                       },
                 goToPage(url){
-                        console.log(url)
-                        this.$router.push({ path: url})
+                        console.log("IN browse blogs", url)
+                        this.$router.push({ path: "Blog/"+url})
                 } 
          }
          
