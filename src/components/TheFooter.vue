@@ -17,7 +17,7 @@
 
         <div class="listItems">
                 <q-btn class="row content-start btn" no-caps unelevated to="Services" padding="0 10px 0 0" flat><span class="item">Services</span></q-btn>
-                  <q-btn  class="row  content-start btn" no-caps unelevated to="Contact" padding="0 10px 0 0" flat><span class="item">Contact us</span></q-btn>
+                  <q-btn  class="row  content-start btn" no-caps unelevated to="Contact" padding="0 10px 0 0" flat><span class="item">Contact</span></q-btn>
                   <q-btn  class="row  content-start btn" no-caps unelevated to="Services" padding="0 10px 0 0" flat><span class="item">Blog</span></q-btn>
                   <q-btn class="row  content-start btn" no-caps  unelevated to="Services" padding="0 10px 0 0" flat><span class="item">Blog</span></q-btn>
                 
@@ -49,7 +49,7 @@
 
 .btn{
         margin-top:10px;
-      
+      white-space: nowrap;
 }
 
 .item{

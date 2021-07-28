@@ -4,20 +4,15 @@
    
 <div class=" fit row no-wrap justify-center items-start content-center">
         <ServiceCard class="col-6" :serviceInfo="serviceInfos[0]" />
-        <!-- <h5 class="col-6 smallText">  {{serviceInfos[0].metadescription}}</h5> -->
  </div>
 <div class="cards fit row no-wrap justify-end items-start content-center">
-        
-          <!-- <h5 class="col-6 smallText" > {{serviceInfos[1].metadescription}}</h5> -->
           <ServiceCard class="col-6 "  :serviceInfo="serviceInfos[1]" />
  </div>   
 
  <div class="cards fit row no-wrap justify-start items-start content-center">
         <ServiceCard class="col-6 " :serviceInfo="serviceInfos[2]" />
-          <!-- <h5 class="col-6 smallText"> {{serviceInfos[2].metadescription}}</h5> -->
  </div> 
 
- <q-btn @click="scrollToTop" class="q-mt-xl" style="margin-left:50px">Back to the top</q-btn>
  </q-page>
   </q-page-container>
 </template>
@@ -30,15 +25,6 @@ export default {
         components:{
                 ServiceCard
         },
-         methods:{
-                scrollToTop() {
-                                window.scrollTo({
-                                        top: 0,
-                                        left: 0,
-                                        behavior: 'smooth'
-                                        });
-                        }
-         }, 
         data(){
                 return{
                         serviceInfos:
@@ -78,4 +64,19 @@ margin-right:20px;
         font-size:1rem;
         margin:10px;
 }
+
+@media only screen and (max-width: 600px) {
+        .btnMobile{
+        margin-left:35px;
+        }
+}
+
+@media only screen and (min-width: 600px){
+     .btn{
+             display:flex;
+             margin-top:70px;
+             margin-left:50px;
+        }   
+}
+
 </style>

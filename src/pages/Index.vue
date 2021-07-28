@@ -11,8 +11,8 @@
 
 <script>
 import Carousel from 'src/components/Carousel.vue';
-import BrowseBlogs from 'src/components/BrowseBlogs.vue';
-import ServicesTabs from 'src/components/ServicesTabs.vue';
+import BrowseBlogs from 'src/components/BrowsingBlogs/BrowseBlogs.vue';
+import ServicesTabs from 'src/components/BrowseServices/ServicesTabs.vue';
 import TheFooter from 'src/components/TheFooter.vue';
 export default{
   components: { Carousel,BrowseBlogs,ServicesTabs,TheFooter },

@@ -11,7 +11,7 @@
         <q-btn flat>{{serviceInfo.action}}</q-btn>
       </q-card-actions>
     </q-card> -->
-    <q-card class="my-card">
+    <q-card class="my-card" @click="goToServices" >
       <q-card-section horizontal >
         <q-img
          style="height:350px;"  
@@ -40,7 +40,14 @@
 
 <script>
 export default{
-        props:['serviceInfo']
+        props:['serviceInfo'],
+        methods:{
+          goToServices(){
+            this.$router.push({
+              path:'Services'
+            })
+          }
+        }
 }
 </script>
 

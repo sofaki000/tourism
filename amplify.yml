@@ -15,6 +15,7 @@ frontend:
         - npm install -g @quasar/cli
         - npm install emailjs-com --save
         - npm install vue-router@next --save
+        - npm install --save @vue/composition-api
         - npm ci
     build:
       commands:

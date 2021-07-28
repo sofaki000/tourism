@@ -23,7 +23,7 @@
       </q-tabs>
     </q-header>
 
-    <q-drawer show-if-above v-model="rightDrawerOpen" side="right" class="mobile-show">
+    <q-drawer  v-model="rightDrawerOpen" side="right" class="mobile-show">
       <q-list bordered  class="mobile-show" >
       <q-btn  style = "position:relative; left:80%; top:%;" flat @click="toggleRightDrawer" icon="close" />
 
@@ -71,12 +71,12 @@
     <q-btn  @click="facebook" size="sm" padding="xs" round class="btn" color="primary" icon="mdi-facebook " />
     <q-btn @click="linkedin" size="sm"  padding="xs" round class="btn" color="primary" icon="mdi-linkedin " />
     <q-btn  @click="instagram"  size="sm"  padding="xs"  round class="btn" color="primary" icon="mdi-instagram" />
-    
+    <q-btn @click="scrollToTop" size="sm" round icon="keyboard_arrow_up" color="primary" class="pageScroller"  />
+       
+
       </q-toolbar>
     </q-footer>
- <!-- <q-page-scroller reverse position="top" :scroll-offset="20" :offset="[0, 18]">
-            <q-btn fab icon="keyboard_arrow_down" color="accent" />
-          </q-page-scroller> -->
+
 </q-page-container>
   </q-layout>
 </template>
@@ -96,6 +96,13 @@ export default {
     }
   },
   methods:{
+       scrollToTop() {
+                                  window.scrollTo({
+                                        top: 0,
+                                        left: 0,
+                                        behavior: 'smooth'
+                                        });
+                        },
     facebook(){
 		//	window.open('https://www.facebook.com/dialog/share?app_id='+this.facebookAppID+'&display=popup&href='+encodeURIComponent(this.url)+'&quote='+encodeURIComponent(this.message));
 			window.open('https://www.facebook.com/')
@@ -134,4 +141,15 @@ export default {
 .btn{
   margin:0 5px;
 }
+
+
+
+
+.pageScroller{
+  position:absolute;
+  right:20px;
+}
+
+
+
 </style>
