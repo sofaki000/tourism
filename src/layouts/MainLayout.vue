@@ -131,7 +131,7 @@ export default {
      handleScroll: function(evt, el) {
                         if (window.scrollY > 300) {
                                 var list, index;
-                      //   list = document.getElementsByClassName("hideInitially");
+                      //   list = document.getElementsByClassName("hideInitially"); 
                       //           for (index = 0; index < list.length; ++index) {
                       //           list[index].setAttribute("style", "opacity: 1; ");
                       //            list[index].setAttribute("style", "max-width: 5px; ");
