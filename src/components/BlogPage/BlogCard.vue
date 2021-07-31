@@ -27,8 +27,10 @@ export default {
         },
         methods:{
                 goToPage(url){
-                        console.log(url)
-                        this.$router.push({ path: "Blog/"+url})
+                        console.log("Blog/"+url)
+                        const finalUrl = "/Blog/"+ url
+                        console.log(finalUrl, "from blog")
+                        this.$router.push({ path: finalUrl})
                 } 
          }
 }

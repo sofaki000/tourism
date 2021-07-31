@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Carousel from 'src/components/Carousel.vue';
+import Carousel from 'src/components/LandingCarousel/Carousel.vue';
 import BrowseBlogs from 'src/components/BrowsingBlogs/BrowseBlogs.vue';
 import ServicesTabs from 'src/components/BrowseServices/ServicesTabs.vue';
 import TheFooter from 'src/components/TheFooter.vue';

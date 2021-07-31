@@ -17,22 +17,23 @@
             @mouseleave="autoplay = true"
           >
    
-        <q-carousel-slide :name="1" class="biggerImage" style="display:flex;justify-items:center;text-align:center" img-src="../assets/ai-gordis-boats.jpg" >
-          <div class="centeringTextOnMobile">
+        <q-carousel-slide :name="1" class="biggerImage" style="display:flex;justify-items:center;text-align:center" img-src="../../assets/ai-gordis-boats.jpg" >
+         <CarouselSlide />
+          <!-- <div class="centeringTextOnMobile">
           <h2 class="mobileBigText text-white absolute-center text-weight-regular revealSlowly">
             Corfu
           </h2>
           <h5 class="mobileDescription revealSlowly description titleSmall text-white absolute-center text-weight-regular" style="margin-top:55px;" >
            The island of memories</h5>
-             <!-- <q-btn style="background: transparent; color: white;margin-top:105px" class="revealSlower description titleSmall text-white absolute-center text-weight-regular" label="See travelling plans" />
-            -->
-           <the-button style="margin-top:105px"  class="revealSlower description titleSmall text-white absolute-center text-weight-regular" :routerLink="'Blog'" >See travelling plans</the-button>
-             </div>
+             <q-btn style="background: transparent; color: white;margin-top:105px" class="revealSlower description titleSmall text-white absolute-center text-weight-regular" label="See travelling plans" />
+           
+            <the-button style="margin-top:105px"  class="revealSlower description titleSmall text-white absolute-center text-weight-regular" :routerLink="'Blog'" >See travelling plans</the-button>
+             </div> --> 
             </q-carousel-slide> 
      
       
         
-        <q-carousel-slide :name="2" class="biggerImage" style="display:flex;justify-items:center;text-align:center" img-src="../assets/frourio.jpg">
+        <q-carousel-slide :name="2" class="biggerImage" style="display:flex;justify-items:center;text-align:center" img-src="../../assets/frourio.jpg">
           <div class="centeringTextOnMobile">
           <h2 class="mobileBigText revealSlowly titleSmall text-white absolute-center text-weight-regular	">
             The emerald
@@ -44,7 +45,7 @@
             </q-carousel-slide> 
 
 
-        <q-carousel-slide :name="3"  class="biggerImage" style="display:flex;justify-items:center;text-align:center" img-src="../assets/ai-gordis.jpg">
+        <q-carousel-slide :name="3"  class="biggerImage" style="display:flex;justify-items:center;text-align:center" img-src="../../assets/ai-gordis.jpg">
           <div class="centeringTextOnMobile">
           <h2 class="mobileBigText revealSlowly titleSmall text-white absolute-center text-weight-regular	">
             Beautiful beaches
@@ -55,7 +56,7 @@
             </div>
           
           </q-carousel-slide>
-        <q-carousel-slide :name="4" class="biggerImage" style="display:flex;justify-items:center;text-align:center" img-src="../assets/ai-gordis-boats.jpg">
+        <q-carousel-slide :name="4" class="biggerImage" style="display:flex;justify-items:center;text-align:center;width:100%" img-src="../../assets/ai-gordis-boats.jpg">
          <div class="centeringTextOnMobile">
           <h2 class="mobileBigText revealSlowly titleSmall text-white absolute-center text-weight-regular	">
             Relaxing places
@@ -70,9 +71,10 @@
   </q-page>
 </template>
 <script>
-import TheButton from './TheButton.vue'
+import TheButton from '../TheButton.vue'
+import CarouselSlide from './CarouselSlide.vue'
 export default {
-  components:{ TheButton},
+  components:{ TheButton, CarouselSlide},
   data() {
     return {
       slide: 1,
@@ -84,13 +86,14 @@ export default {
 
 </script>
 <style scoped>
-@media only screen and (max-width: 700px) {
+
+@media only screen and (max-width: 700px) { 
   .h2 {
     font-size: 35px;
     margin: auto;
   }
 .biggerImage{
-  width:800px;
+  width:100%;
   margin:auto;
   text-align:center
 }
@@ -99,7 +102,7 @@ export default {
   }
 
   .carouselContainerXs{
-    width:700px;
+    width:100%;
       height:600px;
       margin:auto;
   }
@@ -111,7 +114,7 @@ export default {
   .centeringTextOnMobile{
     position:relative;
     margin:auto;
-    right:60px;
+    right:10px;
     bottom:30px;
   }
 }
@@ -191,19 +194,32 @@ export default {
 }
 
 .carouselContainerMd{
- width:1300px;
+ width:450px;
   height:600px;
   margin:auto;
 }
 }
 
 @media only screen and (min-width: 1500px) {
-.biggerImage{
-  width:1500px;
+/* .biggerImage{
+  width:100%;
+  margin:auto;
+} */
+.carouselContainerXl{
+  width:3400px;
+  height:600px;
   margin:auto;
 }
-.carouselContainerXl{
-  width:2400px;
+}
+
+@media only screen and (min-width:1000px) {
+
+.biggerImage{
+  width:100%;
+}
+
+.carouselContainerMd{
+ width:1450px;
   height:600px;
   margin:auto;
 }

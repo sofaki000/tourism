@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hhh LpR lFr"> 
-<q-page-container>
+<q-page-container >
     <q-header reveal elevated class="bg-primary text-white" height-hint="98">
       <q-toolbar>
         <q-toolbar-title>
@@ -71,7 +71,7 @@
     <q-btn  @click="facebook" size="sm" padding="xs" round class="btn" color="primary" icon="mdi-facebook " />
     <q-btn @click="linkedin" size="sm"  padding="xs" round class="btn" color="primary" icon="mdi-linkedin " />
     <q-btn  @click="instagram"  size="sm"  padding="xs"  round class="btn" color="primary" icon="mdi-instagram" />
-    <q-btn @click="scrollToTop" size="sm" round icon="keyboard_arrow_up" color="primary" class="pageScroller"  />
+    <q-btn @click="scrollToTop" v-scroll="handleScroll"  size="sm" round icon="keyboard_arrow_up" color="primary" class="pageScroller hideInitially"  />
        
 
       </q-toolbar>
@@ -127,7 +127,20 @@ export default {
       window.open('https://www.instagram.com/')
           this.showDialog=false;
 			this.resolve();
-    }
+    },
+     handleScroll: function(evt, el) {
+                        if (window.scrollY > 300) {
+                                var list, index;
+                      //   list = document.getElementsByClassName("hideInitially");
+                      //           for (index = 0; index < list.length; ++index) {
+                      //           list[index].setAttribute("style", "opacity: 1; ");
+                      //            list[index].setAttribute("style", "max-width: 5px; ");
+                      //             list[index].setAttribute("style", "max-height: 5px; ");
+                              
+                      //           }
+                       }
+                        return window.scrollY > 300;
+                      }
   }
 }
 </script>
@@ -157,6 +170,15 @@ export default {
   position:absolute;
   right:20px;
 }
+
+
+/* .hideInitially{
+  padding:2px;
+   max-width: 5px;
+  max-height: 5px;
+  opacity: 0;
+  backface-visibility: hidden;
+} */
 
 
 

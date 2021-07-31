@@ -118,7 +118,12 @@ export default{
   inject:['cardInfos'],
     created(){
       const blogUrl = this.$route.params.BlogTitle;
-      const selectedPost = this.cardInfos.find(blogPost=> blogPost.urlTitle === blogUrl)
+      console.log(blogUrl)
+      console.log("look at meee")
+      const selectedPost = this.cardInfos.find(blogPost=>{
+        console.log(blogPost)
+        return blogPost.urlTitle === blogUrl
+      } )
       this.selectedBlogPost = selectedPost
       this.findFeatured()
      },
@@ -136,9 +141,6 @@ export default{
                this.featuredPosts.push(this.cardInfos[selectedPostIndex+postCount-1])
             }
           }
-
-          console.log("THE FEATURED AREEE", this.featuredPosts)
- 
        }
      }
   

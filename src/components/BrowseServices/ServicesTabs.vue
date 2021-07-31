@@ -12,7 +12,7 @@
       <q-tabs v-model="tab" class="text-blue-8">
         <q-tab class="col-4 phoneTabs mediumTabs" name="Renting">Renting</q-tab>
         <q-tab class="col-4 phoneTabs mediumTabs" name="Contact">Contact</q-tab>
-        <q-tab class="col-4 biggerBtn mediumTabs"  name="Transfers">Transfers</q-tab>
+        <q-tab class="col-4 phoneLetterTabs mediumTabs" name="Transfers">Transfers</q-tab>
       </q-tabs>
 </div>
       <q-separator />
@@ -68,13 +68,13 @@ export default {
             .phoneTabs{
                 height:20px;
                 width:80px;
-                margin:10px;
+                margin:5px;
       }
 
-      .biggerBtn{
-              width:100px;
+      .phoneLetterTabs{
+              width:80px;
                height:20px;
-                margin:10px;
+                margin:5px;
             }
 }
 
