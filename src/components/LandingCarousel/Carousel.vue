@@ -18,8 +18,8 @@
           >
    
         <q-carousel-slide :name="1" class="biggerImage" style="display:flex;justify-items:center;text-align:center" img-src="../../assets/ai-gordis-boats.jpg" >
-         <CarouselSlide />
-          <!-- <div class="centeringTextOnMobile">
+         <!-- <CarouselSlide /> -->
+          <div class="centeringTextOnMobile">
           <h2 class="mobileBigText text-white absolute-center text-weight-regular revealSlowly">
             Corfu
           </h2>
@@ -28,7 +28,7 @@
              <q-btn style="background: transparent; color: white;margin-top:105px" class="revealSlower description titleSmall text-white absolute-center text-weight-regular" label="See travelling plans" />
            
             <the-button style="margin-top:105px"  class="revealSlower description titleSmall text-white absolute-center text-weight-regular" :routerLink="'Blog'" >See travelling plans</the-button>
-             </div> --> 
+             </div> 
             </q-carousel-slide> 
      
       
@@ -114,7 +114,6 @@ export default {
   .centeringTextOnMobile{
     position:relative;
     margin:auto;
-    right:10px;
     bottom:30px;
   }
 }
